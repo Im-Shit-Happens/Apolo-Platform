@@ -1,0 +1,988 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color_hechos: #3b5998;
+  --color_atrasados: #00acce;
+  --color_SinCorregir: #e95950;
+  --color_Corregidos: #c8232c;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  height: 100vh;
+}
+
+body::-webkit-scrollbar {
+	width: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+	background: #4FC3F7;
+}
+
+.error {
+  color: #F1828D;
+  font-size: 16px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.mensaje {
+  color: #9DACB9;
+  font-size: 16px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* ESTILOS LOGIN */
+
+.Contenedor-Login {
+  width: 400px;
+  height: 400px;
+  background: rgba(163, 213, 255, 0.5);
+  color: #000;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  padding: 70px 30px;
+  border-radius: 15px;
+}
+
+.Contenedor-Login .logo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: absolute;
+  top: -50px;
+  left: calc(50% - 50px);
+}
+
+.Contenedor-Login h1 {
+  margin: 0;
+  padding: 0 0 20px;
+  text-align: center;
+  font-size: 22px;
+}
+
+.Contenedor-Login input {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.Contenedor-Login input[type="text"],
+.Contenedor-Login input[type="password"] {
+  border: 0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  padding: 14px 10px;
+  text-align: center;
+  border: 2px solid #000;
+  width: 200px;
+  outline: none;
+  color: #000;
+  border-radius: 20px;
+  transition: 0.25s;
+}
+
+.Contenedor-Login input[type="text"]:focus,
+.Contenedor-Login input[type="password"]:focus {
+  width: 280px;
+  border-color: #fff;
+}
+
+.Contenedor-Login .submit {
+  border: 0;
+  outline: none;
+  height: 40px;
+  background: #000;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 20px;
+  border: 2px solid #000;
+  cursor: pointer;
+}
+
+.Contenedor-Login .submit:hover {
+  background: none;
+  color: #000;
+}
+
+.Contenedor-Login a {
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 20px;
+  color: darkgrey;
+}
+
+.Contenedor-Login a:hover {
+  color: #000;
+  cursor: pointer;
+}
+
+/* TERMINA ESTILOS LOGIN */
+
+
+
+/* ESTILOS PRE REGISTRO */
+
+.Contenedor-Opcion {
+  /* Le damos tamaño al formulario de Log in */
+  width: 400px;
+  height: 250px;
+  /* Cambiamos los colores del fondo del formulario y de las letras */
+  background: rgba(163, 213, 255, 0.5);
+  color: #000;
+  /* Posicionamos el formulario */
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  /* Estilizamos los elementos dentro dandole espacio, para arriba y abajo entre ellos, y bordes */
+  box-sizing: border-box;
+  padding: 70px 30px;
+  border-radius: 15px;
+  display: none;
+}
+
+.Contenedor-Opcion .logo {
+  /* Le damos estilos al logo */
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  /* Posicionamos el logo */
+  position: absolute;
+  top: -50px;
+  /* Con el parametro calc calculamos el 50% menos los 50 px de arriba */
+  left: calc(50% - 50px);
+}
+
+.Contenedor-Opcion input {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* Seleccionamos esta vez solo el input de type button */
+.Contenedor-Opcion input[type="button"] {
+  border: 0;
+  outline: none;
+  height: 40px;
+  background: #000;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 20px;
+  border: 2px solid #000;
+  cursor: pointer;
+}
+
+/* Hacemos que cuando se pase por arriba del boton el fondo desaparezca */
+.Contenedor-Opcion input[type="button"]:hover {
+  background: none;
+  color: #000;
+}
+
+/* TERMINA ESTILOS PRE REGISTRO */
+
+
+
+/* ESTILOS REGISTRO */
+
+.ContenedorRegistro {
+  /* Le damos tamaño al formulario de Log in */
+  width: 400px;
+  height: 600px;
+  /* Cambiamos los colores del fondo del formulario y de las letras */
+  background: rgba(163, 213, 255, 0.5);
+  color: #000;
+  /* Posicionamos el formulario */
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  /* Estilizamos los elementos dentro dandole espacio, para arriba y abajo entre ellos, y bordes */
+  box-sizing: border-box;
+  padding: 70px 30px;
+  border-radius: 15px;
+  display: none;
+}
+
+.ContenedorRegistro .logo {
+  /* Le damos estilos al logo */
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  /* Posicionamos el logo */
+  position: absolute;
+  top: -50px;
+  /* Con el parametro calc calculamos el 50% menos los 50 px de arriba */
+  left: calc(50% - 50px);
+}
+
+.ContenedorRegistro h1 {
+  margin: 0;
+  padding: 0 0 20px;
+  text-align: center;
+  font-size: 22px;
+}
+
+.ContenedorRegistro input {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* Afectamos tanto a los input de type text como a los de type password */
+.ContenedorRegistro input[type="text"],
+.ContenedorRegistro input[type="password"] {
+  border: 0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  padding: 14px 10px;
+  text-align: center;
+  border: 2px solid #000;
+  width: 200px;
+  outline: none;
+  color: #000;
+  border-radius: 20px;
+  transition: 0.25s;
+}
+
+.ContenedorRegistro input[type="text"]:focus,
+.ContenedorRegistro input[type="password"]:focus {
+  width: 280px;
+  border-color: #fff;
+}
+
+/* Seleccionamos esta vez solo el input de type submit */
+.ContenedorRegistro .submit {
+  border: 0;
+  outline: none;
+  height: 40px;
+  background: #000;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 20px;
+  border: 2px solid #000;
+  cursor: pointer;
+}
+
+/* Hacemos que cuando se pase por arriba del boton el fondo desaparezca */
+.ContenedorRegistro .submit:hover {
+  background: none;
+  color: #000;
+}
+
+.ContenedorRegistro a:hover {
+  color: #000;
+}
+
+.ContenedorRegistro .select {
+  border: 0;
+  outline: none;
+  height: 40px;
+  background: #000;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 20px;
+  border: 2px solid #000;
+  cursor: pointer;
+}
+
+/* TERMINA ESTILOS REGISTRO */
+
+
+
+/* SELECT */
+
+select {
+   -webkit-appearance:none;
+   -moz-appearance:none;
+   -ms-appearance:none;
+   appearance:none;
+   outline:0;
+   box-shadow:none;
+   border:0!important;
+   background: #4FC3F7;
+   background-image: none;
+   flex: 1;
+   padding: 0 10px;
+   color:#fff;
+   cursor:pointer;
+   font-size: 12px;
+   font-family: 'Open Sans', sans-serif;
+}
+
+select::-ms-expand {
+   display: none;
+}
+
+.select {
+   margin: 10px auto;
+   position: relative;
+   display: flex;
+   width: 200px;
+   height: 20px;
+   line-height: 2;
+   background: #5c6664;
+   overflow: hidden;
+   border-radius: .25em;
+}
+
+.select::after {
+   content: '\25BC';
+   position: absolute;
+   top: 0;
+   right: 0;
+   padding: 0px 10px;
+   background: #000;
+   cursor:pointer;
+   pointer-events:none;
+   transition:.25s all ease;
+}
+
+.select:hover::after {
+   color: #23b499;
+}
+
+
+
+/* COMIENZA LANDING ALUMNO */
+
+.contenedor {
+  padding: 60px 0;
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.titulo {
+  color: #4FC3F7;
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+/* Header */
+
+header {
+  width: 100%;
+  height: 600px;
+  background: rgb(255,255,255);
+  background: linear-gradient(270deg, rgba(255,255,255,0.39583333333333337) 0%, rgba(109,213,250,0.39814814814814814) 35%, rgba(41,128,185,0.39814814814814814) 100%),  url(../img/Fondo-Login1.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+}
+
+nav {
+  text-align: right;
+  padding: 30px 50px 0 0;
+}
+
+nav > a {
+  color: #000;
+  font-weight: 300;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+nav > a:hover {
+  text-decoration: underline;
+}
+
+input.src {
+  padding: 9px 10px 9px 32px;
+  outline: none;
+  font-size: 18px;
+  border-radius: 25px;
+  color: #444;
+  border: 3px solid #000;
+  background: #fff url("../img/icono-3.png") no-repeat 9px center;
+  width: 60px;
+  height: 30px;
+  transition: all .5s;
+}
+
+input.src:hover {
+  width: 180px;
+  background-color: #fff;
+  border-color: #4FC3F7;
+  box-shadow: 0 0 5px #6dcff680;
+}
+
+header .textos-header {
+  display: flex;
+  height: 430px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.textos-header h1 {
+  font-size: 50px;
+  color: #fff
+}
+
+.textos-header h2 {
+  font-size: 30px;
+  font-weight: 300;
+  color: #fff;
+}
+
+.wave {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+/* About us */
+
+.contenedor-sobre-nosotros {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.imagen-about-us {
+  width: 48%;
+}
+
+.sobre-nosotros .contenido-textos {
+  width: 48%;
+}
+
+.contenido-textos h3 {
+  margin-bottom: 15px;
+}
+
+.contenido-textos h3 span {
+  background: #4FC3F7;
+  color: #fff;
+  border-radius: 50%;
+  display: inline-block;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  padding: 2px;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+  margin-right: 5px;
+}
+
+.contenido-textos p{
+  padding: 0px 0px 30px 15px;
+  font-weight: 300;
+  text-align: justify;
+}
+
+/* Tareas Thumbnail */
+
+.tareas {
+  background: #f2f2f2;
+}
+
+.galeria-tareas {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.imagen-tareas {
+  width: 24%;
+  margin-bottom: 10px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 0 6px 0 rgb(0, 0, 0, .5);
+}
+
+.imagen-tareas > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hover-tareas {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  transform: scale(0);
+  background: rgba(79, 195, 247, 0.8);
+  transition: transform .5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.hover-tareas img {
+  width: 50px;
+}
+
+.hover-tareas p {
+  color: #000;
+}
+
+.imagen-tareas:hover .hover-tareas{
+  transform: scale(1);
+}
+
+.contenedor .showmore {
+  color: #4FC3F7;
+  text-decoration: none;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+	transition: .3s ease all;
+}
+
+.contenedor .showmore:hover {
+	letter-spacing: 3px;
+}
+
+/* Termina Tareas Thumbnail */
+
+/* Acceso a Tarea */
+
+div#acceso-tareas{
+  display: none;
+}
+
+.tarea {
+	display: flex;
+	background: #fff;
+  border-top: 5px solid #4FC3F7;
+  padding: 20px 0px;
+  margin-bottom: 40px;
+  border-bottom: 5px solid #4FC3F7;
+  justify-content: space-evenly;
+}
+
+.tarea .titulo-tarea {
+  padding: 20px 0;
+  text-align: left;
+  color: #4FC3F7;
+  font-weight: 300;
+}
+
+.tarea .contenedor-texto {
+	padding: 20px;
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.tarea .contenedor-thumbnail {
+	width: 50%;
+}
+
+.tarea .contenedor-thumbnail img {
+  width: 300px;
+  height: 300px;
+}
+
+.tarea .descripcion {
+	font-size: 16px;
+	line-height: 1.5625rem;
+	font-weight: 300;
+	margin-bottom: 20px;
+	color: #868b8d;
+}
+
+.tarea .acceder {
+  display: block;
+	margin-top: 30px;
+	color: #4FC3F7;
+  text-align: right;
+	font-size: 20px;
+	border-bottom: 1px solid transparent;
+	transition: .3s ease all;
+  text-decoration: none;
+}
+
+.tarea .acceder:hover {
+  text-decoration: none;
+	border-bottom: 1px solid #4FC3F7;
+}
+
+.tarea .archivo-audio {
+  margin-top: 20px;
+  font-size: 12px;
+  background: #fff;
+  border-radius: 5px;
+  width: 350px;
+  height: 40%;
+  outline: none;
+}
+
+::-webkit-file-upload-button {
+  color: #000;
+  background: #4FC3F7;
+  padding: 20px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+}
+
+::-webkit-file-upload-button:hover {
+  background: #29B6F6;
+  cursor: pointer;
+}
+
+/* Termina Acceso a Tarea */
+
+/* Recomendaciones */
+
+.cards {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.cards .card {
+  background: #4FC3F7;
+  display: flex;
+  width: 46%;
+  height: 200px;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 5px;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.6);
+}
+
+.cards .card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  display: block;
+}
+
+.cards .card > .contenido-texto-card {
+  width: 60%;
+  color: #fff;
+}
+
+.cards .card > .contenido-texto-card p {
+  font-weight: 300;
+  margin-top: 5px;
+}
+
+/* Perfil */
+
+.estadisticas_graficos {
+  background: #f2f2f2;
+  padding-bottom: 30px;
+}
+
+.contenedor_grafico {
+  width: 700px;
+  height: 550px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.grafico {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background-image: conic-gradient(var(--color_hechos) 40%, var(--color_atrasados) 40% 70%, var(--color_SinCorregir) 70% 88%, var(--color_Corregidos)  88%);
+  box-shadow: 1px 1px 5px 1px rgb(70, 70, 70);
+}
+
+.leyenda_all {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+[class^="color_"] {
+  width: 15px;
+  height: 15px;
+  background-color: var(--color_hechos);
+  margin-right: 8px;
+  border-radius: 3px;
+}
+
+.color_atrasados {
+  background-color: var(--color_atrasados);
+}
+
+.color_SinCorregir {
+  background-color: var(--color_SinCorregir);
+}
+
+.color_Corregidos {
+  background-color: var(--color_Corregidos);
+}
+
+.texto_grafico {
+  color: #000;
+  line-height: 1.6;
+}
+
+.total {
+  color: #fff;
+  padding: 10px;
+  border-radius: 3px;
+  background-color: #4FC3F7;
+}
+
+/* Footer */
+
+footer {
+  background: #414141;
+  padding: 60px 0 30px 0;
+  margin: auto;
+  overflow: hidden;
+}
+
+.contenedor-footer {
+  display: flex;
+  width: 90%;
+  justify-content: space-evenly;
+  margin: auto;
+  padding-bottom: 50px;
+  border-bottom: 1px solid #ccc;
+}
+
+.content-foo {
+  text-align: center;
+}
+
+.content-foo h4 {
+  color: #fff;
+  border-bottom: 3px solid #4FC3F7;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+.content-foo p {
+  color: #ccc;
+}
+
+.titulo-final {
+  text-align: center;
+  font-size: 24px;
+  margin: 20px 0 0 0;
+  color: #9e9797;
+}
+
+/* TERMINA LANDING ALUMNO */
+
+/* ESTILOS LANDING PROFESORES */
+
+/* Gestion de Alumnos */
+
+.planteoTareas {
+  margin: 50px auto;
+  position: relative;
+  padding: 30px;
+}
+
+.crear-tareas-contenedor .crear-tareas{
+  position: relative;
+  margin: 32px 0;
+}
+
+.crear-tareas-contenedor .input-text {
+  display: block;
+  width: 100%;
+  height: 36px;
+  border-width: 0 0 2px 0;
+  border-color: #4FC3F7;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.crear-tareas-contenedor .input-text:focus + .label,
+.crear-tareas-contenedor .input-text.not-empty + .label{
+  transform: translateY(-24px);
+}
+
+
+.crear-tareas-contenedor .input-text:focus {
+  outline: none;
+}
+
+.crear-tareas-contenedor .label {
+  position: absolute;
+  left: 20px;
+  bottom: 11px;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+  color: #4FC3F7;
+  cursor: text;
+  text-transform: capitalize;
+  transition: transform 0.2s ease-in-out;
+}
+
+.crear-tareas-contenedor .botonCrearTarea {
+  align-items: center;
+}
+
+.gestion-alumnos {
+  background: #f2f2f2;
+}
+
+.niveles-acedemicos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.select-alumnos {
+  margin: 10px auto;
+  position: relative;
+  display: flex;
+  width: 200px;
+  height: 30px;
+  line-height: 2;
+  background: #5c6664;
+  overflow: hidden;
+  border-radius: .25em;
+}
+
+.select-alumnos::after {
+  content: '\25BC';
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0px 10px;
+  background: #fff;
+  cursor:pointer;
+  pointer-events:none;
+  transition:.25s all ease;
+}
+
+.select-alumnos:hover::after {
+   color: #23b499;
+}
+
+.select-niveles {
+  margin: 10px auto;
+  position: relative;
+  display: flex;
+  width: 200px;
+  height: 30px;
+  line-height: 2;
+  background: #5c6664;
+  overflow: hidden;
+  border-radius: .25em;
+}
+
+.select-niveles::after {
+  content: '\25BC';
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0px 10px;
+  background: #fff;
+  cursor:pointer;
+  pointer-events:none;
+  transition:.25s all ease;
+}
+
+.select-niveles:hover::after {
+   color: #23b499;
+}
+
+.boton-enviar {
+  margin-top: 60px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.enviar {
+  outline: none;
+  background: #4FC3F7;
+  border: none;
+  padding: 7px 30px;
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  cursor: pointer;
+  width: auto;
+  border-radius: 3px;
+}
+
+.enviar:hover {
+  background: #1ba0ef;
+}
+
+textarea {
+  margin: 5px;
+  border: none;
+  outline: none;
+  resize: none;
+}
+
+textarea::-webkit-scrollbar {
+  width: 3px;
+}
+
+textarea::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 10px #BDDAE0;
+}
+
+textarea::-webkit-scrollbar-thumb {
+  background-color: #4FC3F7;
+}
+
+.textarea-devolucion {
+  margin: 5px;
+  width: auto;
+  height: auto;
+  border: 1px solid #4FC3F7;
+  border-radius: 2px;
+  font-size: 16px;
+}
+
+.textarea-devolucion:hover {
+  -moz-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.03);
+  -webkit-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.03);
+  box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.03);
+  border: 1px solid #1ba0ef;
+}
+
+.textarea-devolucion:focus {
+  -moz-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.03);
+  -webkit-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.03);
+  box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.03);
+  border: 1px solid #1ba0ef;
+}
+
+span.devolucion-contador {
+  margin-top: 2px;
+  float: right;
+  font-size: 10px;
+  color: #F1828D;
+}
+
+/* TERMINA LANDING PROFESORES */

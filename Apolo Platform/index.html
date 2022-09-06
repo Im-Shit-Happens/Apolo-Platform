@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device width, initial scale=1.0">
+  <meta http-equiv-"X-UA-Compatible" content="ie-edge">
+  <title>Apolo</title>
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+  <script src="https://kit.fontawesome.com/abcf08e874.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body id="body-background">
+  <!-- LOGIN -->
+  <div class="Contenedor-Login" id="login">
+    <img class="logo" src="img/logo2.jpg" alt="Logo APOLO">
+    <h1>Ingrese Aquí</h1>
+    <form>
+      <!-- USUARIO -->
+
+      <input type="text" placeholder="Ingrese Usuario" id="txtUsuario">
+
+      <!-- Contraseña -->
+
+      <input type="password" placeholder="Ingrese Contraseña" id="txtContraseña">
+
+
+      <p class="error" id="error-login"></p>
+
+      <input type="button" value="Iniciar Sesión" class="submit" id="btnIngresar">
+
+      <a id="btnRegistrarme" onclick="preRegistro()">Registrarme</a>
+    </form>
+  </div>
+  <!-- TERMINA LOGIN -->
+
+  <!-- Pre registro de ALUMNO y PROFESOR -->
+  <div class="Contenedor-Opcion" id="opcion">
+    <img class="logo" src="img/logo2.jpg" alt="Logo APOLO">
+    <form >
+      <!-- Profesor -->
+      <input type="button" class="boton" id="btnProfesor" value="Profesor">
+
+
+      <!-- Estudiante -->
+
+      <input type="button" class="boton" id="btnAlumno" value="Estudiante">
+
+    </form>
+  </div>
+  <!-- TERMINA PRE REGISTRO -->
+
+  <!-- REGISTRO ALUMNO -->
+  <div class="ContenedorRegistro" id="registro-Alumnos">
+    <img class="logo" src="img/logo2.jpg" alt="Logo APOLO">
+    <h1>Ingrese Sus Datos Aquí</h1>
+    <form>
+      <!-- Nombre y apellido -->
+
+      <input type="text" placeholder="Nombre Completo" id="txtNombreAlumno">
+
+      <!-- Usuario -->
+
+      <input type="text" placeholder="Nombre de Usuario" id="txtUsuarioAlumno">
+
+      <!-- Contraseña -->
+
+      <input type="password" placeholder="Ingrese Contraseña" id="txtContraseñaAlumno">
+      <input type="password" placeholder="Confirme Contraseña" id="txtConfirmarAlumno">
+
+      <!-- Seleccion de Profesor -->
+      <div class="select">
+        <select name="profesores" id="profesores">
+          <option selected disabled value="ninguno">Elija un Profesor</option>
+        </select>
+      </div>
+
+      <p class="error" id="error-RegistroAlumno"> </p>
+
+      <input type="button" value="Registrarse" class="submit" id="btnRegistrarAlumno">
+    </form>
+  </div>
+  <!-- TERMINA REGISTRO ALUMNO -->
+
+  <!-- REGISTRO PROFESOR -->
+  <div class="ContenedorRegistro" id="registro-Profesores">
+    <img class="logo" src="img/logo2.jpg" alt="Logo APOLO">
+    <h1>Ingrese Sus Datos Aquí</h1>
+    <form>
+      <!-- Nombre y apellido -->
+
+      <input type="text" placeholder="Nombre Completo" id="txtNombreProfesor">
+
+      <!-- Usuario -->
+
+      <input type="text" placeholder="Nombre de Usuario" id="txtUsuarioProfesor">
+
+      <!-- Contraseña -->
+
+      <input type="password" placeholder="Ingrese Contraseña" id="txtContraseñaProfesor">
+      <input type="password" placeholder="Confirme Contraseña" id="txtConfirmarProfesor">
+
+      <p class="error" id="error-RegistroProfesor"> </p>
+
+      <input type="button" value="Registrarse" class="submit" id="btnRegistrarProfesor">
+    </form>
+  </div>
+  <!-- TERMINA REGISTRO PROFESOR -->
+
+  <!-- LANDING - ALUMNO -->
+  <div id="landing-Alumnos">
+    <header id="Ancla-Inicio">
+      <nav>
+        <a href="#Ancla-Inicio">Inicio</a>
+        <a href="#Ancla-Perfil">Perfil</a>
+        <a href="#Ancla-Tareas">Tareas</a>
+        <a href="#Ancla-AcercaDe">Acerca de</a>
+        <input type="text" name="search" placeholder="Buscar Tareas..." class="src" id="srcBuscar" autocomplete="off">
+      </nav>
+      <section class="textos-header">
+        <h1>Aprende música</h1>
+        <h2>Apolo Platform</h2>
+      </section>
+      <div class="wave" style="height: 150px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #fff;"></path></svg></div>
+    </header>
+    <main>
+      <section class="contenedor sobre-nosotros">
+        <h2 class="titulo">Últimas novedades</h2>
+        <div class="contenedor-sobre-nosotros">
+          <img src="img/undraw_Meditating_re_aiqa.svg" alt="" class="imagen-about-us">
+          <div class="contenido-textos">
+            <h3><span>1</span>Escucha para aprender</h3>
+            <p>Ahora podras encontrar tareas con audios que podras escuchar para practicar. </p>
+            <h3><span>2</span>Sube tu progreso</h3>
+            <p>También podrás subir tus propio progreso haciendo musica mediante audios MP3. </p>
+          </div>
+        </div>
+      </section>
+      <section class="mostrar-Tareas">
+        <div class="contenedor" id="acceso-buscador">
+          <h2 class="titulo">Busqueda</h2>
+        </div>
+        <p class="error" id="error-acceso-buscador"></p>
+      </section>
+      <section id="Ancla-Tareas" class="tareas">
+        <div class="contenedor">
+          <h2 class="titulo">Tareas</h2>
+          <div class="galeria-tareas" id="galeria-tareas"></div>
+          <a class="showmore" onclick="showmore()">Mostrar más</a>
+        </div>
+      </section>
+      <section class="mostrar-Tareas">
+        <div class="contenedor" id="acceso-tareas">
+          <h2 class="titulo">Tareas</h2>
+          <p class="mensaje" id="mensaje-mostrar-tareas"></p>
+        </div>
+      </section>
+      <section class="recomendaciones contenedor">
+        <h2 class="titulo">Recomendaciones</h2>
+        <div class="cards">
+          <div class="card">
+            <img src="img/Logo2.jpg" alt="">
+            <div class="contenido-texto-card">
+              <h4>Apolo Platform</h4>
+              <p id="recomendacion1"></p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="img/Logo2.jpg" alt="">
+            <div class="contenido-texto-card">
+              <h4>Apolo Platform</h4>
+              <p id="recomendacion2"></p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="mostrar-Tareas">
+        <div class="contenedor" id="ejercicios-devueltos">
+          <h2 class="titulo">Devoluciones</h2>
+        </div>
+      </section>
+      <section id="Ancla-Perfil" class="estadisticas_graficos">
+        <div class="contenedor">
+          <h2 class="titulo">Tus estadísticas</h2>
+          <div class="contenedor_grafico">
+            <div class="grafico"></div>
+            <div class="contenedor_leyenda">
+              <span class="leyenda_all">
+                <span class="color_hechos"></span>
+                <p class="texto_grafico" id="hechos"></p>
+              </span>
+              <span class="leyenda_all">
+                <span class="color_atrasados"></span>
+                <p class="texto_grafico" id="atrasados"></p>
+              </span>
+              <span class="leyenda_all">
+                <span class="color_Corregidos"></span>
+                <p class="texto_grafico" id="corregidos"></p>
+              </span>
+              <span class="leyenda_all">
+                <span class="color_SinCorregir"></span>
+                <p class="texto_grafico" id="sinCorregir">r</p>
+              </span>
+              <p class="total" id="cantidadEntregada"></p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div id="Ancla-AcercaDe" class="contenedor-footer">
+        <div class="content-foo">
+          <h4>Telefono</h4>
+          <p>2344567</p>
+        </div>
+        <div class="content-foo">
+          <h4>Email</h4>
+          <p>ApoloSOPORTE@gmail.com</p>
+        </div>
+        <div class="content-foo">
+          <h4>Dirección</h4>
+          <p>Camino de tierra 3399</p>
+        </div>
+      </div>
+      <h2 class="titulo-final">&copy; Apolo Platform</h2>
+    </footer>
+  </div>
+  <!-- TERMINA LANDING ALUMNO -->
+
+  <!-- LANDING PROFESOR -->
+  <div id="landing-Profesores">
+    <header id="Ancla-Inicio">
+      <nav>
+        <a href="#Ancla-Inicio">Inicio</a>
+        <a href="#Ancla-Perfil">Perfil</a>
+        <a href="#Ancla-Tareas">Tareas</a>
+        <a href="#Ancla-AcercaDe">Acerca de</a>
+      </nav>
+      <section class="textos-header">
+        <h1>Aprende música</h1>
+        <h2>Apolo Platform</h2>
+      </section>
+      <div class="wave" style="height: 150px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #fff;"></path></svg></div>
+    </header>
+    <main>
+      <section class="contenedor sobre-nosotros">
+        <h2 class="titulo">Últimas novedades</h2>
+        <div class="contenedor-sobre-nosotros">
+          <img src="img/undraw_teaching_f1cm.svg" alt="" class="imagen-about-us">
+          <div class="contenido-textos">
+            <h3><span>1</span>Nueva sección de Tareas</h3>
+            <p>Sube y evalúa tareas de forma más facil ahora desde la sección de tareas. </p>
+            <h3><span>2</span>Nivel académico</h3>
+            <p>Evalúa a tus alumnos y asignales un nivel académico, inicial, intermedio o avanzado. </p>
+          </div>
+        </div>
+      </section>
+      <section id="Ancla-Crear" class="planteoTareas">
+        <div class="contenedor">
+          <h2 class="titulo">Crear Tarea</h2>
+          <div class="crear-tareas-contenedor" id="crear-tareas">
+            <div class="crear-tareas">
+              <input type="text" name="" id="tituloEjercicio" class="input-text">
+              <label for="tituloEjercicio" class="label">Título</label>
+            </div>
+            <div class="crear-tareas">
+              <input type="text" name="" id="descripcionEjercicio" class="input-text">
+              <label for="descripcionEjercicio" class="label">Descripción</label>
+            </div>
+            <div class="crear-tareas">
+              <div class="select-niveles">
+                <select name="nivel" id="nivel">
+                  <option selected disabled value="ninguno">Elija Nivel Académico</option>
+                  <option value="Inicial">Inicial</option>
+                  <option value="Intermedio">Intermedio</option>
+                  <option value="Avanzado">Avanzado</option>
+                </select>
+              </div>
+            </div>
+            <div class="crear-tareas">
+              <input type="file" name="fotoejercicio" id="fotoEjercicio"><br>
+            </div>
+            <div class="boton-enviar">
+              <input type="button" value="Crear" class="enviar" id="btnCrearTarea">
+            </div>
+            <p class="mensaje" id="mensaje-crear-tarea"></p>
+            <p class="error" id="error-crear-tarea"></p>
+          </div>
+        </div>
+      </section>
+      <section id="Ancla-Tareas" class="gestion-alumnos">
+        <div class="contenedor">
+          <h2 class="titulo">Gestión de Alumnos</h2>
+          <div class="niveles-acedemicos">
+            <div class="select-alumnos">
+              <select name="alumnos" id="alumnos">
+                <option selected disabled value="ninguno">Elija un Alumno</option>
+              </select>
+            </div>
+            <div class="select-niveles">
+              <select name="nivel" id="niveles">
+                <option selected disabled value="ninguno">Elija Nivel Académico</option>
+                <option value="Inicial">Inicial</option>
+                <option value="Intermedio">Intermedio</option>
+                <option value="Avanzado">Avanzado</option>
+              </select>
+            </div>
+          </div>
+          <div class="boton-enviar">
+            <input type="button" value="Enviar" class="enviar" id="btnCambioNivel">
+          </div>
+          <p class="mensaje" id="mensaje-Niveles"></p>
+          <p class="error" id="error-Niveles"></p>
+        </div>
+      </section>
+      <section id="Ancla-MostrarDevoluciones" class="mostrar-Tareas">
+        <div class="contenedor" id="acceso-devoluciones">
+          <h2 class="titulo">Tareas</h2>
+        </div>
+      </section>
+      <section id="Ancla-MostrarEstadisticas" class="mostrar-Tareas">
+        <div class="contenedor" id="acceso-estadisticas">
+          <h2 class="titulo">Estadística de Alumnos</h2>
+          <div class="select-niveles">
+            <select name="nivel" id="alumnoCantidad">
+              <option selected disabled value="ninguno">Elija un Alumno</option>
+            </select>
+          </div>
+          <div class="boton-enviar">
+            <input type="button" value="Enviar" class="enviar" id="btnEstadisticasProfesor">
+          </div>
+          <p id="cantidadesProfesor"></p>
+          <p id="cantidadesAlumnos"></p>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div id="Ancla-AcercaDe" class="contenedor-footer">
+        <div class="content-foo">
+          <h4>Telefono</h4>
+          <p>2344567</p>
+        </div>
+        <div class="content-foo">
+          <h4>Email</h4>
+          <p>ApoloSOPORTE@gmail.com</p>
+        </div>
+        <div class="content-foo">
+          <h4>Dirección</h4>
+          <p>Camino de tierra 3399</p>
+        </div>
+      </div>
+      <h2 class="titulo-final">&copy; Apolo Platform</h2>
+    </footer>
+  </div>
+  <!-- TERMINA LANDING PROFESOR -->
+  <script src="js/scripts.js"></script>
+</body>
+</html>

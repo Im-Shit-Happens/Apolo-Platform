@@ -1,0 +1,4 @@
+Se creo una estructura html, dicha estructura fue dividad en secciones: Login, 
+Landing A y B y Footer.
+Las secciones fueron trabajadas con css y javascript dandole asi estilos y haciendo
+que cumplan respectivas funciones.
