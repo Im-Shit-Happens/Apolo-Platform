@@ -106,6 +106,27 @@ Usuarios.push(nuevoUsuario8);
 
 document.querySelector("#btnIngresar").addEventListener("click", logeousuario);
 
+const validation = new JustValidate('#form');
+
+validation
+  .addField('#txtUsuario', [
+    {
+      rule: 'minLength',
+      value: 3,
+    },
+    {
+      rule: 'maxLength',
+      value: 30,
+    },
+  ])
+  .addField('#txtContraseña', [
+    {
+      rule: 'required',
+      errorMessage: 'Ingrese Contraseña',
+    },
+  ]);
+
+
 function logeousuario() {
 
   let nombreUsuarioLog = document.querySelector("#txtUsuario").value;
