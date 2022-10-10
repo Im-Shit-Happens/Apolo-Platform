@@ -7,11 +7,15 @@
   <title>Apolo</title>
   <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
   <script src="https://kit.fontawesome.com/abcf08e874.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body id="body-background">
+  <script>
+    const validate = new window.JustValidate('#form');
+  </script>
   <!-- LOGIN -->
   <div class="Contenedor-Login" id="login">
     <img class="logo" src="img/logo2.jpg" alt="Logo APOLO">
